@@ -46,7 +46,7 @@ class MainHome : AppCompatActivity() {
         }
 
         binding.mainHomeSearch.setOnClickListener{
-            val intent = Intent(this, Wishlist::class.java)
+            val intent = Intent(this, FabTest::class.java)
             startActivity(intent)
         }
 
@@ -135,9 +135,6 @@ class MainHome : AppCompatActivity() {
             add(MainHomeEventData("2021-05-17", "플로깅 축제", "공릉동","종료"))
             add(MainHomeEventData("2021-06-10 ~ 2021-06-17", "이벤트이벤트이벤트", "삼성동","진행중"))
             add(MainHomeEventData("2020-08-01 ~ 2021-9-01", "아이디어 플로깅", "공릉동","진행중"))
-            add(MainHomeEventData("2020-09-21", "릴레이 플로깅", "하계동","진행중"))
-            add(MainHomeEventData("2020-08-01 ~ 2021-9-01", "아이디어 플로깅", "공릉동","진행중"))
-            add(MainHomeEventData("2020-09-21", "릴레이 플로깅", "하계동","진행중"))
 
         }
 
