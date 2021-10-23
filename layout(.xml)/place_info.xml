@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView2"
@@ -19,15 +20,62 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/place_info_time"
-                android:layout_width="wrap_content"
+            <ToggleButton
+                android:id="@+id/btn_heart2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_heart"
+                android:checked="false"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="(영업시간)"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/place_info_place" />
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+                <TextView
+                    android:id="@+id/place_info_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="(영업시간)"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toTopOf="@+id/imageView6">
+
+                <TextView
+                    android:id="@+id/place_info_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="(전화번호)"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -47,7 +95,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/sample1" />
+                app:srcCompat="@drawable/icon_back_app" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -62,7 +110,7 @@
                 android:id="@+id/place_info_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="(관광지 이름)"
                 android:textColor="#000000"
@@ -74,84 +122,95 @@
 
             <View
                 android:id="@+id/view3"
-                android:layout_width="377dp"
+                android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#cdcdcd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/place_info_img" />
-
-            <TextView
-                android:id="@+id/place_info_call"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="(전화번호)"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-                app:layout_constraintStart_toStartOf="@+id/place_info_time" />
+                app:layout_constraintTop_toBottomOf="@+id/place_info_name" />
 
             <View
                 android:id="@+id/view5"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="520dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#cdcdcd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/place_info_img" />
+                app:layout_constraintTop_toBottomOf="@+id/place_info_recyclerView_place_img" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/place_info_recyclerView_review"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:overScrollMode="never"
-                android:layout_width="417dp"
-                android:layout_height="299dp"
-                android:layout_marginTop="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-            <TextView
-                android:id="@+id/place_info_place"
-                android:layout_width="wrap_content"
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:text="(주소)"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-                app:layout_constraintStart_toEndOf="@+id/imageView4" />
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4">
+
+                <TextView
+                    android:id="@+id/place_info_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="(주소)"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="45dp"
                 android:text="님의 평점"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/place_info_rating_user"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view5" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
                 android:text="플로깅 리뷰"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/view6"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view6" />
 
             <ImageView
@@ -163,33 +222,58 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView6"
                 app:srcCompat="@drawable/place_info_host" />
 
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toTopOf="@+id/imageView7">
+
+                <TextView
+                    android:id="@+id/place_info_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="(사실 이게 뭔지..)"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
             <View
                 android:id="@+id/view6"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#cdcdcd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/place_info_recyclerView_place_img" />
+                app:layout_constraintTop_toBottomOf="@+id/place_info_rating" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="16sp"
                 android:layout_height="16sp"
-                android:layout_marginStart="85dp"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="160dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="45dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/place_info_img"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
                 app:srcCompat="@drawable/place_info_address" />
 
             <RatingBar
                 android:id="@+id/place_info_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="30dp"
                 android:foregroundGravity="center"
                 android:isIndicator="false"
                 android:numStars="5"
@@ -197,17 +281,7 @@
                 android:stepSize="0.5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view5" />
-
-            <TextView
-                android:id="@+id/place_info_host"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="(사실 이게 뭔지..)"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-                app:layout_constraintStart_toStartOf="@+id/place_info_call" />
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             <TextView
                 android:id="@+id/place_info_rating_user"
@@ -217,30 +291,34 @@
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/textView8"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView8" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/place_info_recyclerView_place_img"
-                android:overScrollMode="never"
-                android:layout_width="417dp"
+                android:layout_width="0dp"
                 android:layout_height="150dp"
-                app:layout_constraintBottom_toTopOf="@+id/view5"
+                android:layout_marginTop="20dp"
+                android:overScrollMode="never"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view4" />
 
             <View
                 android:id="@+id/view4"
-                android:layout_width="377dp"
+                android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="360dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:background="#cdcdcd"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/place_info_img" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

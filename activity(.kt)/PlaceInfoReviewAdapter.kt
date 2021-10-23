@@ -14,7 +14,7 @@ class PlaceInfoReviewAdapter : RecyclerView.Adapter<PlaceInfoReviewAdapter.MyVie
         fun bind(placeInfoReviewData : PlaceInfoReviewData){
             // 이미지 넘기는 방법 찾으면 바꾸기 ㅠ
             binding.placeInfoReviewImg.setImageResource(R.drawable.sample1)
-            binding.placeInfoReviewMapImg.setImageResource(R.drawable.sample1)
+            binding.placeInfoReviewMapImg.setImageResource(R.drawable.icon_back_app)
             // ratingBar이 val라고 못바꾼다는데 그럼 난 어떡해..?
             // binding.placeInfoReviewRating = placeInfoReviewData.placeInfoReviewRating
             binding.placeInfoReviewName.text = placeInfoReviewData.placeInfoReviewName.toString()
