@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="TRAPLO"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -18,16 +18,23 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="74d7a699817e54e763ef00b443b9b3c8"/>
 
-        <activity android:name=".MainHome">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".PlaceSearch">
-        </activity>
+        <activity android:name=".MainHome"/>
+        <activity android:name=".FabTest"/>
+        <activity android:name=".PlaceInfo"/>
+        <activity android:name=".Event"/>
+        <activity android:name=".Nature"/>
+        <activity android:name=".EventBig"/>
+        <activity android:name=".Eye"/>
+        <activity android:name=".Wishlist"
+            android:theme="@style/TransparentStatusTheme"/>
+
+
     </application>
 
 </manifest>

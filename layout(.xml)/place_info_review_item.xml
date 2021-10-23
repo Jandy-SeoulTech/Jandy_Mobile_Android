@@ -24,7 +24,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:background="?android:attr/listDivider"
+        android:background="#cdcdcd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/place_info_review_mapImg"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
         android:isIndicator="false"
         android:numStars="5"
         android:rating="5"
@@ -60,22 +61,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginBottom="2dp"
         android:text="(날짜)"
         android:textColor="#CDCDCD"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/place_info_review_name"
-        app:layout_constraintTop_toTopOf="@+id/place_info_review_name" />
-
-    <TextView
-        android:id="@+id/place_info_review_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="(내용)"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/place_info_review_rating"
-        app:layout_constraintTop_toBottomOf="@+id/place_info_review_rating" />
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/place_info_review_name"
+        app:layout_constraintStart_toEndOf="@+id/place_info_review_name" />
 
     <ImageView
         android:id="@+id/place_info_review_mapImg"
@@ -88,19 +79,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_back_app" />
 
-    <TextView
-        android:id="@+id/place_info_review_address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="1dp"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:text="(주소)"
-        android:textColor="#CDCDCD"
-        android:textSize="10sp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/place_info_review_mapImg"
         app:layout_constraintStart_toStartOf="@+id/place_info_review_mapImg"
-        app:layout_constraintTop_toBottomOf="@+id/place_info_review_mapImg" />
+        app:layout_constraintTop_toBottomOf="@+id/place_info_review_mapImg">
+
+        <TextView
+            android:id="@+id/place_info_review_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="(주소)"
+            android:textColor="#CDCDCD"
+            android:textSize="10sp" />
+    </LinearLayout>
 
     <View
         android:id="@+id/view11"
@@ -111,4 +114,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/place_info_review_img" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="@+id/place_info_review_rating"
+        app:layout_constraintTop_toBottomOf="@+id/place_info_review_name">
+
+        <TextView
+            android:id="@+id/place_info_review_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="(내용)"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

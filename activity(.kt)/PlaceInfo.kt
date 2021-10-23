@@ -58,12 +58,12 @@ class PlaceInfo: AppCompatActivity() {
 
     fun initializePlaceInfoReviewlist() { //임의로 데이터 넣어서 만들어봄
         with(mDatas2) {
+            add(PlaceInfoReviewData(0, "test", "2021-10-20", "test test test test test test test test test test test test test test test test test test test ", 0,"서울특별시 노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
-            add(PlaceInfoReviewData(0, "test", "t2021-10-20", "test", 0,"노원구 공릉동"))
             add(PlaceInfoReviewData(0, "test", "2021-10-20", "test", 0,"노원구 공릉동"))
 
         }

@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
 
 
     <TextView
         android:id="@+id/title_traplo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="TRAPLO"
         android:textColor="#79C7FF"
         android:textSize="24sp"
@@ -36,7 +38,7 @@
         android:id="@+id/nestedScrollView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="80dp"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,39 +54,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="575dp"
+                android:layout_marginTop="30dp"
                 android:text="EVENT 🎈"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_nature" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_nature"
                 android:layout_width="0dp"
-                android:layout_height="165dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/title_event"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:overScrollMode="never"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btn_nature_more" />
-
-            <ImageButton
-                android:id="@+id/main_home_userPage"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginEnd="27dp"
-                android:layout_marginRight="27dp"
-                android:layout_marginBottom="10dp"
-                android:background="#00FFFFFF"
-                android:scaleType="centerInside"
-                app:layout_constraintBottom_toTopOf="@+id/recyclerView_pick"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/title_pick"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/mypage" />
+                app:layout_constraintTop_toBottomOf="@+id/intro_nature" />
 
             <TextView
                 android:id="@+id/title_pick"
@@ -93,20 +84,31 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="269dp"
-                android:layout_marginRight="269dp"
                 android:text="오늘의 픽"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/main_home_userPage"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/main_home_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="검색"
+                android:textColor="#888888"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/title_pick"
+                app:layout_constraintTop_toTopOf="@+id/title_pick" />
 
             <TextView
                 android:id="@+id/intro_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="다양한 기업들과 특별한 이벤트를 즐겨봐!"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/title_event"
@@ -116,22 +118,21 @@
                 android:id="@+id/title_goods"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="276dp"
-                android:layout_marginBottom="276dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="30dp"
                 android:text="눈도 즐겁게 👀"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_event_more" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_event" />
 
             <TextView
                 android:id="@+id/intro_nature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:text="나도 건강하게 지구도 건강하게"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@+id/title_nature"
@@ -141,37 +142,34 @@
                 android:id="@+id/view"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
                 android:background="#888888"
-                app:layout_constraintBottom_toTopOf="@+id/recyclerView_event"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/recyclerView_event" />
+                app:layout_constraintTop_toBottomOf="@+id/intro_event" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_pick"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="37dp"
-                android:layout_marginBottom="37dp"
-                app:layout_constraintBottom_toTopOf="@+id/title_nature"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="never"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/title_pick" />
+                app:layout_constraintTop_toBottomOf="@+id/title_pick" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_event"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="58dp"
-                android:layout_marginBottom="55dp"
-                app:layout_constraintBottom_toBottomOf="@+id/title_goods"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btn_event_more" />
+                app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <TextView
                 android:id="@+id/title_nature"
@@ -179,57 +177,67 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="311dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif"
                 android:text="자연과 함께라면 🌳"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_pick" />
 
             <Button
                 android:id="@+id/btn_event_more"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="38dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginRight="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="더보기 >"
                 android:textColor="#888888"
-                app:layout_constraintEnd_toEndOf="@+id/view"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView_nature" />
+                app:layout_constraintBottom_toBottomOf="@+id/intro_event"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <Button
                 android:id="@+id/btn_nature_more"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginRight="18dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="더보기 >"
                 android:textColor="#888888"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView_pick" />
+                app:layout_constraintBottom_toBottomOf="@+id/intro_nature"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <ImageView
                 android:id="@+id/eye"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/sample1"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_goods"/>
+                app:layout_constraintTop_toBottomOf="@+id/title_goods" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/main_home_userPage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="4dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/title_traplo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/mypage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

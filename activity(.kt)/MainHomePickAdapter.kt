@@ -16,7 +16,7 @@ class MainHomePickAdapter : RecyclerView.Adapter<MainHomePickAdapter.MyViewHolde
 
         fun bind(mainHomePickData : MainHomePickData){
             // 이미지 넘기는 방법 찾으면 바꾸기 ㅠ
-            binding.mainHomePickImg.setImageResource(R.drawable.sample1)
+            binding.mainHomePickImg.setImageResource(R.drawable.icon_back_app)
 
             binding.mainHomePickTitle.text = mainHomePickData.mainHomePickTitle.toString()
             binding.mainHomePickPlace.text = mainHomePickData.mainHomePickPlace.toString()

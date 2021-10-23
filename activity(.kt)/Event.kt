@@ -38,7 +38,7 @@ class Event : AppCompatActivity() {
 
     fun initializeMainHomeEventlist() { //임의로 데이터 넣어서 만들어봄
         with(mDatas) {
-            add(MainHomeEventData("2021-01-01 ~ 2021-02-02", "봄맞이 플로깅 러닝", "방배동","종료"))
+            add(MainHomeEventData("2021-01-01 ~ 2021-02-02", "봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 봄맞이 플로깅 러닝 ", "방배동","종료"))
             add(MainHomeEventData("2021-05-17", "플로깅 축제", "공릉동","종료"))
             add(MainHomeEventData("2021-06-10 ~ 2021-06-17", "이벤트이벤트이벤트", "삼성동","진행중"))
             add(MainHomeEventData("2020-08-01 ~ 2021-9-01", "아이디어 플로깅", "공릉동","진행중"))
